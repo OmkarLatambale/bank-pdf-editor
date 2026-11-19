@@ -1,0 +1,119 @@
+@import './base.css';
+
+body {
+  overflow: hidden;
+  background: #eef2f7;
+  color: #172b4d;
+}
+
+button {
+  border: 1px solid #b6c2d2;
+  border-radius: 6px;
+  padding: 8px 13px;
+  background: #fff;
+  color: #172b4d;
+  cursor: pointer;
+  font: inherit;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+button:hover:not(:disabled) {
+  border-color: #0a4f93;
+  background: #edf5ff;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+}
+
+#root {
+  height: 100vh;
+}
+
+.app-shell {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+}
+
+.top-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 14px 22px;
+  border-bottom: 1px solid #d5dbe5;
+  background: #fff;
+}
+
+.eyebrow {
+  color: #0a4f93;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.document-meta {
+  color: #65758b;
+  font-size: 12px;
+}
+
+h1 {
+  overflow: hidden;
+  max-width: 580px;
+  color: #172b4d;
+  font-size: 18px;
+  font-weight: 700;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.top-bar-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.primary-button {
+  border-color: #0a4f93;
+  background: #0a4f93;
+  color: #fff;
+}
+
+.primary-button:hover:not(:disabled) {
+  border-color: #083d72;
+  background: #083d72;
+}
+
+.empty-state,
+.viewer-message {
+  display: grid;
+  flex: 1;
+  place-content: center;
+  gap: 8px;
+  padding: 32px;
+  color: #41516a;
+  text-align: center;
+}
+
+.empty-state h2 {
+  color: #172b4d;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.error-banner {
+  margin: 0;
+  padding: 10px 20px;
+  background: #fff0f0;
+  color: #9d1c1c;
+  font-size: 14px;
+}
+
+@media (max-width: 700px) {
+  .top-bar {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
